@@ -6,9 +6,9 @@ import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
 
-import eu.fr.insee.formation.business.dto.UserListDto;
-import eu.fr.insee.formation.business.ecolis.exception.EcolisBusinessException;
-import eu.fr.insee.formation.business.entity.Utilisateur;
+import eu.fr.indyli.formation.business.dto.UserListDto;
+import eu.fr.indyli.formation.business.ecolis.exception.EcolisBusinessException;
+import eu.fr.indyli.formation.business.entity.Utilisateur;
 
 /**
  * 
@@ -20,42 +20,54 @@ import eu.fr.insee.formation.business.entity.Utilisateur;
 public interface IUtilisateurService {
 
 	/**
-     * recupere un utilisateur par son login et son password
-     * @param login : Login de l'utilisateur qu'on souhaite recuperer
-     * @param password : Password de l'utilisateur qu'on souhaite recuperer
-     * @return : Utilisateur recherche
-     */
-	public Utilisateur findByEmailAndPassword(String login,String password) throws EcolisBusinessException ;
-    /**
-     * Remonte les auteurs de comment postes apres une date et ayant depos� une annonce pour ville arrivee donn�e
-     * @param pDatePivot : Date pivot de depot du commentaire
-     * @param pVilleArrivee : Ville d'arriv�e
-     * @return
-     */
-    public UserListDto findAuthorsCommentByDateAndPostedAnnonce(Date paramDatePivot,String paramVilleArrivee) throws EcolisBusinessException;
-    /**
-     * Recupere un utilisateur par son email
-     * @param email
-     * @return
-     */
-    public Utilisateur findByEmail(String email) throws EcolisBusinessException;
-    
-    /**
-     * Recupere un utilisateur par son id
-     * @param id : Identifiant de l'utilisateur qu'on souhaite recuperer
-     * @return
-     * @throws EcolisBusinessException
-     */
-    public Utilisateur findById(Long id) throws EcolisBusinessException;
-    /**
-     * Remonte tous les utilisateurs
-     * @return
-     */
+	 * recupere un utilisateur par son login et son password
+	 * 
+	 * @param login    : Login de l'utilisateur qu'on souhaite recuperer
+	 * @param password : Password de l'utilisateur qu'on souhaite recuperer
+	 * @return : Utilisateur recherche
+	 */
+	public Utilisateur findByEmailAndPassword(String login, String password) throws EcolisBusinessException;
+
+	/**
+	 * Remonte les auteurs de comment postes apres une date et ayant depos� une
+	 * annonce pour ville arrivee donn�e
+	 * 
+	 * @param pDatePivot    : Date pivot de depot du commentaire
+	 * @param pVilleArrivee : Ville d'arriv�e
+	 * @return
+	 */
+	public UserListDto findAuthorsCommentByDateAndPostedAnnonce(Date paramDatePivot, String paramVilleArrivee)
+			throws EcolisBusinessException;
+
+	/**
+	 * Recupere un utilisateur par son email
+	 * 
+	 * @param email
+	 * @return
+	 */
+	public Utilisateur findByEmail(String email) throws EcolisBusinessException;
+
+	/**
+	 * Recupere un utilisateur par son id
+	 * 
+	 * @param id : Identifiant de l'utilisateur qu'on souhaite recuperer
+	 * @return
+	 * @throws EcolisBusinessException
+	 */
+	public Utilisateur findById(Long id) throws EcolisBusinessException;
+
+	/**
+	 * Remonte tous les utilisateurs
+	 * 
+	 * @return
+	 */
 	UserListDto findAll();
+
 	/**
 	 * Cree un nouvel utilisateur
-	 * @param user  : Utilisateur  a creer
-	 * @return  : Retourne l'identifiant de l'utilisateur en cours de cr�ation
+	 * 
+	 * @param user : Utilisateur a creer
+	 * @return : Retourne l'identifiant de l'utilisateur en cours de cr�ation
 	 * @throws EcolisBusinessException
 	 */
 	public Long createUser(Utilisateur user) throws EcolisBusinessException;

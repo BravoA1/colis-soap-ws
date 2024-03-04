@@ -1,4 +1,4 @@
-package eu.fr.insee.formation.business.service.publisher;
+package eu.fr.indyli.formation.business.service.publisher;
 
 /**
  * 
@@ -8,15 +8,15 @@ package eu.fr.insee.formation.business.service.publisher;
 
 import javax.xml.ws.Endpoint;
 
+import eu.fr.indyli.formation.business.utils.EcolisConstantesBusiness;
 import eu.fr.insee.formation.business.service.impl.UtilisateurServiceImpl;
-import eu.fr.insee.formation.business.utils.GestaConstantesBusiness;
 
-public class GestacheServicePublisher {
+public class EcolisServicePublisher {
 
 	public static void main(String[] args) {
 
 		System.out.println("Beginning to publish Gesta Service now");
-		Endpoint.publish("http://" + GestaConstantesBusiness.SERVER_IP + ":" + GestaConstantesBusiness.SERVER_PORT
+		Endpoint.publish("http://" + EcolisConstantesBusiness.SERVER_IP + ":" + EcolisConstantesBusiness.SERVER_PORT
 				+ "/gestache/users", new UtilisateurServiceImpl());
 		System.out.println("Users Done publishing...");
 	}

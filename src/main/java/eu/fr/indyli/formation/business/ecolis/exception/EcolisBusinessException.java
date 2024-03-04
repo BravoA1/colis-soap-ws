@@ -1,4 +1,4 @@
-package eu.fr.insee.formation.business.ecolis.exception;
+package eu.fr.indyli.formation.business.ecolis.exception;
 
 /**
  * Classe de gestion des exceptions

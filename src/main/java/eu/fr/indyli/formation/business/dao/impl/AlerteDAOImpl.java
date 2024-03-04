@@ -1,12 +1,12 @@
-package eu.fr.insee.formation.business.dao.impl;
+package eu.fr.indyli.formation.business.dao.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import eu.fr.insee.formation.business.dao.IAlerteDAO;
-import eu.fr.insee.formation.business.ecolis.exception.EcolisBusinessException;
-import eu.fr.insee.formation.business.entity.Alerte;
+import eu.fr.indyli.formation.business.dao.IAlerteDAO;
+import eu.fr.indyli.formation.business.ecolis.exception.EcolisBusinessException;
+import eu.fr.indyli.formation.business.entity.Alerte;
 
 public class AlerteDAOImpl implements IAlerteDAO{
 

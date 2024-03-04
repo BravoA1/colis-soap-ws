@@ -1,4 +1,4 @@
-package eu.fr.insee.formation.business.entity;
+package eu.fr.indyli.formation.business.entity;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 

@@ -1,4 +1,4 @@
-package eu.fr.insee.formation.business.service.test;
+package eu.fr.indyli.formation.business.service.test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -13,15 +13,15 @@ import org.junit.Test;
 import eu.fr.indyli.formation.business.dto.UserListDto;
 import eu.fr.indyli.formation.business.ecolis.exception.EcolisBusinessException;
 import eu.fr.indyli.formation.business.entity.Utilisateur;
+import eu.fr.indyli.formation.business.service.IUtilisateurService;
 import eu.fr.indyli.formation.business.utils.EcolisConstantesBusiness;
-import eu.fr.insee.formation.business.service.IUtilisateurService;
-/**
- * Classe de test Utilisateur
- */
+
 public class UtilisateurServiceTest {
 
 	private Service service;
-	//Initialisation du serveur SOAP devant donner acces aux services exposes
+	//Initialisation du serveur SOAP devant donner acc�s aux services expos�s
+
+
 	@Before
 	public void initService() throws MalformedURLException{
 		URL url = new URL(EcolisConstantesBusiness.URL_USER_PATH);

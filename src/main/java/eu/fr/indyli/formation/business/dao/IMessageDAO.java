@@ -1,10 +1,10 @@
-package eu.fr.insee.formation.business.dao;
+package eu.fr.indyli.formation.business.dao;
 
 import java.util.Date;
 import java.util.List;
 
-import eu.fr.insee.formation.business.ecolis.exception.EcolisBusinessException;
-import eu.fr.insee.formation.business.entity.Message;
+import eu.fr.indyli.formation.business.ecolis.exception.EcolisBusinessException;
+import eu.fr.indyli.formation.business.entity.Message;
 
 public interface IMessageDAO extends ICommunDAO<Message>{
 

@@ -1,8 +1,8 @@
-package eu.fr.insee.formation.business.dao;
+package eu.fr.indyli.formation.business.dao;
 
 import java.util.List;
 
-import eu.fr.insee.formation.business.entity.Alerte;
+import eu.fr.indyli.formation.business.entity.Alerte;
 
 public interface IAlerteDAO extends ICommunDAO<Alerte>{
 

@@ -1,4 +1,4 @@
-package eu.fr.insee.formation.business.entity;
+package eu.fr.indyli.formation.business.entity;
 // Generated 25 juin 2017 02:21:10 by Hibernate Tools 5.2.0.CR1
 
 import java.util.ArrayList;

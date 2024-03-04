@@ -1,10 +1,10 @@
-package eu.fr.insee.formation.business.utils;
+package eu.fr.indyli.formation.business.utils;
 /**
  * Classe de constantes
  * @author CHZOME
  *
  */
-public class GestaConstantesBusiness {
+public class EcolisConstantesBusiness {
 
 	public final static String SERVER_IP = "127.0.0.1";
     public final static Integer SERVER_PORT = 9898;

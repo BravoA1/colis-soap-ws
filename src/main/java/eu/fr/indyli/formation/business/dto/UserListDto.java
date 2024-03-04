@@ -1,8 +1,8 @@
-package eu.fr.insee.formation.business.dto;
+package eu.fr.indyli.formation.business.dto;
 
 import java.util.List;
 
-import eu.fr.insee.formation.business.entity.Utilisateur;
+import eu.fr.indyli.formation.business.entity.Utilisateur;
 
 public class UserListDto {
 

@@ -1,12 +1,12 @@
-package eu.fr.insee.formation.business.dao.impl;
+package eu.fr.indyli.formation.business.dao.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import eu.fr.insee.formation.business.dao.IUtilisateurDAO;
-import eu.fr.insee.formation.business.ecolis.exception.EcolisBusinessException;
-import eu.fr.insee.formation.business.entity.Utilisateur;
+import eu.fr.indyli.formation.business.dao.IUtilisateurDAO;
+import eu.fr.indyli.formation.business.ecolis.exception.EcolisBusinessException;
+import eu.fr.indyli.formation.business.entity.Utilisateur;
 
 /**
  * 

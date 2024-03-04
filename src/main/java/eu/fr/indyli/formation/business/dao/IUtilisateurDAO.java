@@ -1,10 +1,10 @@
-package eu.fr.insee.formation.business.dao;
+package eu.fr.indyli.formation.business.dao;
 
 import java.util.ArrayList;
 import java.util.Date;
 
-import eu.fr.insee.formation.business.ecolis.exception.EcolisBusinessException;
-import eu.fr.insee.formation.business.entity.Utilisateur;
+import eu.fr.indyli.formation.business.ecolis.exception.EcolisBusinessException;
+import eu.fr.indyli.formation.business.entity.Utilisateur;
 
 public interface IUtilisateurDAO extends ICommunDAO<Utilisateur> {
 	/**
