@@ -16,34 +16,36 @@ import eu.fr.indyli.formation.business.entity.Utilisateur;
 import eu.fr.indyli.formation.business.service.IUtilisateurService;
 import eu.fr.indyli.formation.business.utils.EcolisConstantesBusiness;
 
-@WebService(serviceName=EcolisConstantesBusiness.USER_SERVICE_NAME,endpointInterface = "eu.fr.indyli.formation.business.service.IUtilisateurService")
-public class UtilisateurServiceImpl implements IUtilisateurService{
+@WebService(serviceName = EcolisConstantesBusiness.USER_SERVICE_NAME, endpointInterface = "eu.fr.indyli.formation.business.service.IUtilisateurService")
+public class UtilisateurServiceImpl implements IUtilisateurService {
 
 	private IUtilisateurDAO userDAO = null;
-	
+
 	public UtilisateurServiceImpl() {
 		this.userDAO = new UtilisateurDAOImpl();
 	}
-	
+
 	@Override
-	public Utilisateur findByEmailAndPassword(String email, String password) throws EcolisBusinessException{
-		if (StringUtils.isBlank(email) || StringUtils.isBlank(password)){
+	public Utilisateur findByEmailAndPassword(String email, String password) throws EcolisBusinessException {
+		if (StringUtils.isBlank(email) || StringUtils.isBlank(password)) {
 			throw new EcolisBusinessException("VOUS DEVEZ RENSEINGER LES 2 CHAMPS");
 		}
 		return userDAO.findByEmailAndPassword(email, password);
 	}
 
 	@Override
-	public ArrayList<Utilisateur> findAuthorsCommentByDateAndPostedAnnonce(Date paramDatePivot, String paramVilleArrivee) throws EcolisBusinessException{
-		if (StringUtils.isBlank(paramVilleArrivee) || paramDatePivot == null){
+	public ArrayList<Utilisateur> findAuthorsCommentByDateAndPostedAnnonce(Date paramDatePivot,
+			String paramVilleArrivee) throws EcolisBusinessException {
+		if (StringUtils.isBlank(paramVilleArrivee) || paramDatePivot == null) {
 			throw new EcolisBusinessException("VOUS DEVEZ RENSEINGER LES 2 CHAMPS");
 		}
 		return userDAO.findAuthorsCommentByDateAndPostedAnnonce(paramDatePivot, paramVilleArrivee);
 	}
 
 	@Override
-	public Utilisateur findByEmail(String email) throws EcolisBusinessException{
-		if (StringUtils.isBlank(email)) throw new EcolisBusinessException("VOUS DEVEZ RENSEINGER L'EMAIL");
+	public Utilisateur findByEmail(String email) throws EcolisBusinessException {
+		if (StringUtils.isBlank(email))
+			throw new EcolisBusinessException("VOUS DEVEZ RENSEINGER L'EMAIL");
 		return this.userDAO.findByEmail(email);
 	}
 
@@ -53,8 +55,6 @@ public class UtilisateurServiceImpl implements IUtilisateurService{
 		UserListDto userListDto = new UserListDto(userList);
 		return userListDto;
 	}
-	
-	
 
 	@Override
 	public Utilisateur findById(Long id) throws EcolisBusinessException {
